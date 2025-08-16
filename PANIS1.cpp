@@ -3,27 +3,26 @@
 using namespace std;
 
 int main() {
-    // Assign the values to variables a, b, and c
+    
     string a = "I";
-    string b = "Love";
+    string b = "Love"; 
     string c = "You";
 
-    int n;
-    cout << "Enter a number: ";
-    cin >> n;  // Input a number, for example, 3
+ int n;
+
+    cout << "Enter first Name: ";
+    cin >> n;
     cout << a << " " << endl;
-    
-    
-    cout << "Enter a number: ";
+
+    cout << "Enter Midddle Name: ";
     cin >> n;
     cout << b << " " << endl;
-    
-    cout << "Enter a number: ";
+
+    cout << "Enter Last Name: ";
     cin >> n;
     cout << c << " " << endl;
-    
-    cout << "The word is: " << a << " " << b << " " << c << " " << endl;
-    
+
+    cout << "The word is" << a << " " << b << " " << c << " " << "Juliana Nicole P. Ramos" << endl;
+
     return 0;
-    
 }
