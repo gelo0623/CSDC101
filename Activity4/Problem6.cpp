@@ -3,8 +3,9 @@
 using namespace std;
 
 int main () {
-    
-    char choice;
+
+    char choice, again;
+    do {
     cout << "-----Switch Problem-----" << endl;
     cout << "Enter 1 to run Basic Pricing Decision" << endl;
     cout << "Enter 2 to run  Weather-Based Discounts" << endl;
@@ -14,8 +15,6 @@ int main () {
     cout << "------------------------" << endl;
     cout << "Enter Choice: ";
     cin >> choice;
-
-    // Removed second input: cin >> choice;
 
     switch(choice){
         case '1': {
@@ -30,7 +29,6 @@ int main () {
             }
             break;
         }
-
         case '2': {
             int temperature;
             cout << "What is the temperature: ";
@@ -92,15 +90,19 @@ int main () {
 
             switch(move){
                 case 'W':
+                case 'w':
                     cout << "The location of the player is (0, +1)";
                     break;
                 case 'S':
+                case 's':
                     cout << "The location of the player is (0, -1)";
                     break;
                 case 'A':
+                case 'a':
                     cout << "The location of the player is (-1, 0)";
                     break;
                 case 'D':
+                case 'd':
                     cout << "The location of the player is (+1, 0)";
                     break;
                 default:
@@ -108,16 +110,18 @@ int main () {
                     break;
             }
             break;
-        }
-        cout << "Do you want to choose again(y/n): ";
-        cin >> choice;
-        
-        while (choice != 'Y' || choice != 'y');
+        } 
     }
-    cout << "Do you want to choose again(y/n): ";
-        cin >> choice;
+    cout << "\nDo you want to choose again(y/n): ";
+        cin >> again;
+    
+    }
+        while (again == 'y' || again == 'Y');
+        if (again == 'N' || again == 'n'){
+            cout << "Exciting Program na tayo sah!" <<  endl;
+        }else{
+            cout << "Invalid Choice po ate";
+        }
         
-        while (choice != 'Y' || choice != 'y');
-
     return 0;
 }
