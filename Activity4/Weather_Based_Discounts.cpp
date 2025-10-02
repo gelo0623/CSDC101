@@ -1,42 +1,42 @@
 /*
-Problem 2: Weather-Based Discounts
+Problem 1: Basic Pricing Decision
 
 Problem:
-You want to attract more customers. If it’s hot (temperature is 30°C or more), offer a 20% discount.
+You sell one cup of lemonade for $1. If a customer has $1 or more, they can buy a cup.
 
 Task:
 Write a program that:
-Ask for the temperature.
+Ask the user how much money they have.
+Uses an if statement to determine if they can buy lemonade.
 
-Sets the price to:
-$0.80 if temperature >= 30
-$1.00 otherwise
-Outputs the final price.
+Outputs:
+"Enjoy your lemonade!" if they have $1 or more.
+"Sorry, you need more money." otherwise.
 
 Sample Input:
-Enter today's temperature in Celsius: 32
+Enter your money: 0.75
 
 Sample Output:
+Sorry, you need more money.
+    */
 
-It's hot! Lemonade costs $0.80 today.
 
-*/
 
-#include <iostream> 
+#include <iostream>
 
 using namespace std;
 
 int main () {
     
-    int temperature; //
+    int money;
     
-    cout << "What is the temperature: ";
-    cin >> temperature;
+    cout << "Enter your money: ";
+    cin >> money;
     
-    if (temperature >= 30){
-        cout << "It's hot! Lemonade costs $0.80 today.";
+    if (money >= 1){
+        cout << "Enjoy your lemonade!";
     }else{
-        cout << "It's not hot! Lemonade costs $1.00";
+        cout << "Sorry, you need more money.";
     }
     return 0;
 }
