@@ -1,3 +1,16 @@
+/*
+Problem 6: Switch problem 1 to 5
+Combine all problems using switch statement
+
+Sample Input:
+What problem do you want to see? 1
+
+Sample Output:
+*Basic pricing Decision Runs*
+
+Submit a cpp file, a link to your github repository, or a notion page
+    */
+
 #include <iostream> 
 
 using namespace std;
@@ -60,27 +73,28 @@ int main () {
 
         case '4': {
             float discount, cups = 1, discount1 = 0, discount2 = 0.10, discount3 = 0.20, total;
-            cout << "\n-----Bulk Purhcase Discount-----" << endl;
-            cout << "\nInput how many cups you want shawty: ";
-            cin >> cups;
-
-            if (cups >= 1 && cups <= 4){
-                discount = cups + discount1;
-                cout << "Total cost: $" << discount << endl;
-            }
-            else if (cups >= 5 && cups <= 9){
-                discount = cups * discount2;
-                total = cups - discount;
-                cout << "The total cost with discounted price is: $" << discount << endl;
-            } 
-            else if (cups >= 10){
-                discount = cups * 0.20;
-                total = cups - discount;
-                cout << "The total cost with discounted price is: $" << discount << endl;
-            }
-            else {
-                cout << "Input cups babygirl UwU" << endl;
-            }
+    
+    cout << "\n-----Bulk Purhcase Discount-----" << endl;
+    cout << "\nInput how many cups you want shawty: ";
+    cin >> cups;
+    
+    if (cups >= 1 && cups <= 4){
+        discount = cups + discount1;
+        cout << "Total cost: $" << discount << endl;
+    }
+    else if (cups >= 5 && cups <= 9){
+        discount = cups * discount2;
+        total = cups - discount;
+        cout << "The total cost with discounted price is: $" << total << endl;
+    } 
+    else if (cups >= 10){
+        discount = cups * 0.20;
+        total = cups - discount;
+        cout << "The total cost with discounted price is: $" << discount << endl;
+    }
+    else {
+        cout << "Input cups babygirl UwU" << endl;
+    }
             break;
         }
 
