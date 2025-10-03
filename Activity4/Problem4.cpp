@@ -28,7 +28,7 @@ using namespace std;
 
 int main () {
     
-    float discount, cups = 1, discount1 = 0, discount2 = 0.10, discount3 = 0.20;
+    float discount, cups = 1, discount1 = 0, discount2 = 0.10, discount3 = 0.20, total;
     
     cout << "\n-----Bulk Purhcase Discount-----" << endl;
     cout << "\nInput how many cups you want shawty: ";
@@ -40,10 +40,12 @@ int main () {
     }
     else if (cups >= 5 && cups <= 9){
         discount = cups * discount2;
-        cout << "The total cost with discounted price is: $" << discount << endl;
+        total = cups - discount;
+        cout << "The total cost with discounted price is: $" << total << endl;
     } 
     else if (cups >= 10){
         discount = cups * 0.20;
+        total = cups - discount;
         cout << "The total cost with discounted price is: $" << discount << endl;
     }
     else {
