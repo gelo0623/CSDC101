@@ -127,17 +127,15 @@ int main () {
             }
             break;
         } 
+        default:
+        cout << "Invalid choice baby";
     }
     cout << "\nDo you want to choose again(y/n): ";
         cin >> again;
     
     }
         while (again == 'y' || again == 'Y');
-        if (again == 'N' || again == 'n'){
-            cout << "Exciting Program na tayo sah!" <<  endl;
-        }else{
-            cout << "Invalid Choice po ate";
-        }
+            cout << "Exciting Program...\n";
         
     return 0;
 }
