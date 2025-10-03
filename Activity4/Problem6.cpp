@@ -83,7 +83,7 @@ int main () {
         }
 
         case '5': {
-            char move;  // Changed from 'choice' to avoid redeclaration
+            char move;  
             cout << "\n-----Player Movement-----" << endl;
             cout << "\nInput the pressed button: ";
             cin >> move;
