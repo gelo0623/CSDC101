@@ -70,12 +70,12 @@ int main () {
             }
             else if (cups >= 5 && cups <= 9){
                 discount = cups * discount2;
-                total = discount - cups;
+                total = cups - discount;
                 cout << "The total cost with discounted price is: $" << discount << endl;
             } 
             else if (cups >= 10){
                 discount = cups * 0.20;
-                total = discount - cups;
+                total = cups - discount;
                 cout << "The total cost with discounted price is: $" << discount << endl;
             }
             else {
