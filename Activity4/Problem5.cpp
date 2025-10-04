@@ -27,32 +27,44 @@ using namespace std;
 
 int main () {
     
-    char choice;
+    char move, move1;
+    int y = 0, x = 0;
+    do {
     cout << "\n-----Player Movement-----" << endl;
     cout << "\nInput the pressed button: ";
-    cin >> choice;
+    cin >> move;
     
-    switch(choice){
-        case 'W':
-        cout << "The location of the player is (0, +1)";
-        break;
+    switch(move){
+                case 'W':
+                case 'w':
+                y += 1;
+                    break;
+                    
+                case 'S':
+                case 's':
+                    x -= 1;
+                    break;
+                    
+                case 'A':
+                case 'a':
+                    y -= 1;
+                    break;
+                    
+                case 'D':
+                case 'd':
+                    x += 1;
+                    break;
+                    
+                default:
+                    cout << "Invalid choice baby!";
+                    break;
+            }
+           cout << "The location of the player is ( " << x << ", " << y << " )" << endl;
+            cout << "Do you want to move again?(y/n): ";
+            cin >> move1;
+            }
+        while (move1 == 'y' || move1 == 'Y');
+            
+            return 0;
         
-        case 'S':
-        cout << "The location of the player is (0, -1)";
-        break;
-        
-        case 'A':
-        cout << "The location of the player is (-1, 0)";
-        break;
-        
-        case 'D':
-        cout << "The location of the player is (+1, 0)";
-        break;
-        
-        default:
-        cout << "Invalid choice!";
-        break;
     }
-    return 0;
-}
-   
