@@ -10,7 +10,6 @@ Sample Output:
 
 Submit a cpp file, a link to your github repository, or a notion page
     */
-
 #include <iostream> 
 
 using namespace std;
@@ -18,6 +17,7 @@ using namespace std;
 int main () {
 
     char choice, again;
+    int x = 0, y = 0, momal;
     do {
     cout << "-----Switch Problem-----" << endl;
     cout << "Enter 1 to run Basic Pricing Decision" << endl;
@@ -99,7 +99,9 @@ int main () {
         }
 
         case '5': {
-            char move;  
+            char move;
+            char move1;
+            do {
             cout << "\n-----Player Movement-----" << endl;
             cout << "\nInput the pressed button: ";
             cin >> move;
@@ -107,26 +109,35 @@ int main () {
             switch(move){
                 case 'W':
                 case 'w':
-                    cout << "The location of the player is (0, +1)";
+                y += 1;
                     break;
+                    
                 case 'S':
                 case 's':
-                    cout << "The location of the player is (0, -1)";
+                    x -= 1;
                     break;
+                    
                 case 'A':
                 case 'a':
-                    cout << "The location of the player is (-1, 0)";
+                    y -= 1;
                     break;
+                    
                 case 'D':
                 case 'd':
-                    cout << "The location of the player is (+1, 0)";
+                    x += 1;
                     break;
+                    
                 default:
                     cout << "Invalid choice!";
                     break;
             }
+            cout << "The location of the player is ( " << x << ", " << y << " )" << endl;
+            cout << "Do you want to move again?(y/n): ";
+            cin >> move1;
+            }
+        while (move1 == 'y' || move1 == 'Y');
             break;
-        } 
+        }
         default:
         cout << "Invalid choice baby";
     }
